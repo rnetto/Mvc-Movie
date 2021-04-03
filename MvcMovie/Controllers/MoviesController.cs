@@ -21,7 +21,7 @@ namespace MvcMovie.Controllers
 
         // GET: Movies
         public async Task<IActionResult> Index(string searchString)
-        {   //pesquisa na barra
+        {   //pesquisa por nome
             var movies = from m in _context.Movie
                          select m;
             if (!String.IsNullOrEmpty(searchString))
